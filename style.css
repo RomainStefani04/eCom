@@ -270,3 +270,15 @@ body>div {
 		flex-direction: column;
 	}
 }
+
+.burger-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.burger-menu .bar {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+}
