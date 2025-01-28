@@ -1,3 +1,244 @@
-h1 {
-    color: red;
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+body>div {
+	background: linear-gradient(#0b0b0d, #17192d, #1f2564);
+	height: fit-content;
+}
+
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 25px;
+	font-size: 16px;
+	align-items: center;
+	gap: 20px;
+}
+
+.navBar .titre {
+	color: #444fd6;
+	font-size: 20px;
+	margin: 0;
+}
+
+.navButtons {
+	display: flex;
+	list-style: none;
+	gap: 30px;
+	margin: 0;
+	align-items: center;
+}
+
+.navButtons p {
+	color: #ccc;
+}
+
+.navButtons p:hover {
+	color : white;
+	cursor: pointer;
+}
+
+.button {
+	background-color: transparent;
+	color: #444fd6;
+	border : solid 2px #444fd6;
+	border-radius: 5px;
+	padding: 6px 14px;
+	
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	width: fit-content;
+	height: fit-content;
+}
+
+.button:hover {
+	color: white;
+	background-color: #444fd6;
+	transition: 0.3s;
+}
+
+.button_active {
+	background-color: #444fd6;
+	color: white;
+	border : solid 2px #444fd6;
+	border-radius: 5px;
+	padding: 10px 18px;
+	
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	width: fit-content;
+	height: fit-content;
+}
+
+.button_active:hover {
+	color: #444fd6;
+	background-color: transparent;
+	transition: 0.3s;
+}
+
+.mainItem {
+	display: flex;
+	padding: 20px;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+	gap: 20px;
+}
+
+.mainItem .informations {
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 10px 0px;
+}
+
+.mainItem .informations h1 {
+	font-size: 4vw;
+	margin: 0;
+}
+
+.mainItem .informations .description {
+	margin: 0;
+}
+
+.mainItem > img {
+	width: 100%;
+	height: 100%;
+}
+
+.mainItem .informations .autresImages {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.mainItem .informations .autresImages div {
+	background-color: #23263f;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.mainItem .informations .autresImages div:hover {
+	filter: brightness(0.7);
+	transition: 0.3s;
+}
+
+.mainItem .informations .autresImages img {
+	width: 100px;
+	height: 100px;
+}
+
+
+.item {
+	background: #141725;
+	display: flex;
+	padding: 20px;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+}
+
+.item .detail {
+	color: #444fd6;
+	margin: 0;
+}
+
+.item .informations {
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 10px 0px;
+}
+
+.item .informations h1 {
+	font-size: 4vw;
+	margin: 0;
+}
+
+.item .informations .description {
+	margin: 0;
+}
+
+.item > img {
+	height: 100%;
+	width: 100%;
+}
+
+.item .informations .autresImages {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.item .informations .autresImages div {
+	background-color: #23263f;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+.item .informations .autresImages img {
+	width: 100px;
+	height: 100px;
+}
+
+.footer {
+	background: #030305;
+	display: flex;
+	justify-content: space-around;
+	height: fit-content;
+	padding: 20px;
+	gap: 30px;
+	align-items: center;
+
+}
+
+.footer div {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-items: center;
+}
+
+.footer div h1 {
+	color: #444fd6;
+	font-weight: bold;
+	margin: 0;
+	font-size: 20px;
+}
+
+.footer div p {
+	color: #ccc;
+	margin: 0;
+}
+
+.footer div p:hover {
+	color : white;
+	cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+	
+	.navBar .navButtons p {
+		display: none;
+	}
+
+	.mainItem {
+		flex-wrap: wrap;
+	}
+
+	.item {
+		flex-wrap: wrap;
+	}
+
+	.footer {
+		flex-direction: column;
+	}
 }
