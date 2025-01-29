@@ -1,3 +1,4 @@
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -6,18 +7,18 @@ html, body {
 	color: white;
 }
 
-body>div {
+.fondGradient {
 	background: linear-gradient(#0b0b0d, #17192d, #1f2564);
-	height: fit-content;
 }
 
 .navBar {
 	display: flex;
 	justify-content: space-between;
-	padding: 10px 25px;
+	padding: 0;
 	font-size: 16px;
 	align-items: center;
 	gap: 20px;
+	padding: 15px 15px;
 }
 
 .navBar .titre {
@@ -36,6 +37,7 @@ body>div {
 
 .navButtons p {
 	color: #ccc;
+	margin: 0;
 }
 
 .navButtons p:hover {
@@ -81,111 +83,6 @@ body>div {
 	transition: 0.3s;
 }
 
-.mainItem {
-	display: flex;
-	padding: 30px;
-	align-items: center;
-	justify-content: center;
-	height: fit-content;
-	gap: 20px;
-}
-
-.mainItem .informations {
-	min-width: 300px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	padding: 10px 0px;
-}
-
-.mainItem .informations h1 {
-	font-size: 4vw;
-	margin: 0;
-}
-
-.mainItem .informations .description {
-	margin: 0;
-}
-
-.mainItem > img {
-	width: 100%;
-	height: 100%;
-}
-
-.mainItem .informations .autresImages {
-	display: flex;
-	gap: 12px;
-}
-
-.mainItem .informations .autresImages div {
-	background-color: #23263f;
-	border-radius: 8px;
-	padding: 10px;
-}
-
-.mainItem .informations .autresImages div:hover {
-	filter: brightness(0.7);
-	transition: 0.3s;
-}
-
-.mainItem .informations .autresImages img {
-	width: 100%;
-	height: 100%;
-}
-
-
-.item {
-	background: #141725;
-	display: flex;
-	padding: 30px;
-	align-items: center;
-	justify-content: center;
-	height: fit-content;
-}
-
-.item .detail {
-	color: #444fd6;
-	margin: 0;
-}
-
-.item .informations {
-	min-width: 300px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	padding: 10px 0px;
-}
-
-.item .informations h1 {
-	font-size: 4vw;
-	margin: 0;
-}
-
-.item .informations .description {
-	margin: 0;
-}
-
-.item > img {
-	height: 100%;
-	width: 100%;
-}
-
-.item .informations .autresImages {
-	display: flex;
-	gap: 12px;
-}
-
-.item .informations .autresImages div {
-	background-color: #23263f;
-	border-radius: 8px;
-	padding: 10px;
-}
-
-.item .informations .autresImages img {
-	width: 100px;
-	height: 100px;
-}
-
 .footer {
 	background: #030305;
 	display: flex;
@@ -221,64 +118,96 @@ body>div {
 	cursor: pointer;
 }
 
-
-@media (max-width: 800px) {
-	
-	.navBar .navButtons p {
-		display: none;
-	}
-
-	.mainItem {
-		flex-wrap: wrap;
-	}
-	
-	.mainItem .informations {
-		align-items: center;
-		text-align: center;
-	}
-
-	.mainItem .informations h1 {
-		font-size: 8vw;
-		margin: 0;
-	}
-
-	.mainItem > img {
-		width: 70%;
-		height: 70%;
-	}
-
-	.item {
-		flex-wrap: wrap;
-	}
-   
-	.item .informations {
-		align-items: center;
-		text-align: center;
-	}
-	
-	.item .informations h1 {
-		font-size: 8vw;
-		margin: 0;
-	}
-
-	.item > img {
-		width: 70%;
-		height: 70%;
-	}
-
-	.footer {
-		flex-direction: column;
-	}
+.burgerMenu {
+	display: none;
 }
 
-.burger-menu {
+.burgerMenuIcon {
+	position: relative;
+	z-index: 10;
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 }
 
-.burger-menu .bar {
+.burgerMenuIcon .bar {
 	width: 25px;
 	height: 3px;
 	background-color: white;
+	transition: 0.3s;
+}
+
+.burgerMenuIcon.active .bar:nth-child(1) {
+	transform: rotate(-45deg) translate(-5px, 6px);
+	transition: 0.3s;
+}
+
+.burgerMenuIcon.active .bar:nth-child(2) {
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.burgerMenuIcon.active .bar:nth-child(3) {
+	transform: rotate(45deg) translate(-5px, -6px);
+	transition: 0.3s;
+}
+
+.sideMenu {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+
+	width: 200px;
+	height: 100%;
+
+	background: #1f2564;
+	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	gap: 20px;
+	
+	opacity: 0;
+	transform: translateX(100%);
+	transition: 0.5s ease;
+}
+
+.sideMenu.show {
+	opacity: 1;
+	transition: 0.5s ease;
+	transform: translateX(0%);
+}
+
+.sideMenu .sideMenuButton {
+	padding: 10px 20px;
+	width: 100%;
+	height: 40px;
+	width: 100%;
+	color: #ccc;
+	margin: 0;
+	padding: 0;
+	align-content: center;
+	text-align: center;
+}
+
+.sideMenu .sideMenuButton:hover {
+	background-color: #141725;
+}
+
+
+@media (max-width: 800px) {
+	
+	.navBar .navButtons {
+		display: none;
+	}
+
+	.burgerMenu {
+		display: block;
+	}
+
+	.footer {
+		flex-direction: column;
+	}
+
 }

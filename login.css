@@ -1,0 +1,42 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.containerLogin {
+	background: #191d4b;
+    padding: 20px 100px;
+    border-radius: 12px;
+
+    margin-top: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 5px;
+}
+
+.containerLogin .titre {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.containerLogin form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.containerLogin .autreOption {
+    color: #444fd6;
+    cursor: pointer;
+}

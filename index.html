@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="header">
+    <div class="sideMenu">
+        <p class="sideMenuButton" onclick="location.href='login.html'">Login</p>
+        <p class="sideMenuButton">Présentation</p>
+        <p class="sideMenuButton">Contact</p>
+        <button class="button">Acheter</button>
+    </div>
+    <div class="fondGradient">
         <div class="navBar">
             <p class="titre">HEADBOOST</p>
             <div class="navButtons">
-                <p>Accueil</p>
+                <p onclick="location.href='login.html'">Login</p>
                 <p>Présentation</p>
                 <p>Contact</p>
                 <button class="button">Acheter</button>
@@ -60,6 +67,6 @@
             <p>Instagram</p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="burgerMenu.js"></script>
 </body>
 </html>
