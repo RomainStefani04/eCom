@@ -11,9 +11,13 @@ html, body {
     height: 100%;
 }
 
+#inscription {
+    display: none;
+}
+
 .containerLogin {
 	background: #191d4b;
-    padding: 20px 100px;
+    padding: 30px 40px;
     border-radius: 12px;
 
     margin-top: 150px;
@@ -30,13 +34,28 @@ html, body {
     padding-bottom: 10px;
 }
 
-.containerLogin form {
+.containerLogin .champs {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.containerLogin .champs .champ {
+    background: #191d4b;
+    border: 1px solid #444fd6;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px 8px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.containerLogin .champs .button {
+    width: 200px;
+}
+
 .containerLogin .autreOption {
     color: #444fd6;
     cursor: pointer;
+    font-size: 12px;
 }

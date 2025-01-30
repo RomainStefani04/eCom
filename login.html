@@ -27,20 +27,20 @@
         <div class="containerLogin">
             <div id="connexion">
                 <h1 class="titre">Connexion</h1>
-                <form action="login.php" method="post">
-                    <input type="text" name="login" placeholder="Identifiant">
-                    <input type="password" name="password" placeholder="Mot de passe">
-                    <input type="submit" value="Connexion">
+                <form class="champs">
+                    <input required id="emailConnexion" class="champ" type="text" name="login" placeholder="Email">
+                    <input required id="mdpConnexion" class="champ" type="password" name="password" placeholder="Mot de passe">
+                    <button class="button" type="submit">Connexion</button>
                 </form>
                 <p class="autreOption" onclick="afficherInscription()">S'inscrire</p>
             </div>
             <div id="inscription">
                 <h1 class="titre">Inscription</h1>
-                <form action="inscription.php" method="post">
-                    <input type="text" name="login" placeholder="Identifiant">
-                    <input type="password" name="password" placeholder="Mot de passe">
-                    <input type="password" name="passwordRepeat" placeholder="Confirmation du mot de passe">
-                    <input type="submit" value="Incription">
+                <form class="champs">
+                    <input required id="emailInscription" class="champ" type="text" name="login" placeholder="Email">
+                    <input required id="mdpInscription" class="champ" type="password" name="password" placeholder="Mot de passe">
+                    <input required id="confMdpInscription" class="champ" type="password" name="passwordRepeat" placeholder="Confirmation du mot de passe">
+                    <button class="button" type="submit">Incription</button>
                 </form>
                 <p class="autreOption" onclick="afficherConnexion()">Se connecter</p>
             </div>
@@ -68,5 +68,6 @@
     </div>
     <script src="burgerMenu.js"></script>
     <script src="login.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

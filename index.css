@@ -2,6 +2,7 @@
 .mainItem {
 	display: flex;
 	padding: 30px;
+	padding-top: 80px;
 	align-items: center;
 	justify-content: center;
 	height: fit-content;
@@ -26,7 +27,6 @@
 }
 
 .mainItem > img {
-	width: 100%;
 	height: 100%;
 }
 
@@ -39,6 +39,8 @@
 	background-color: #23263f;
 	border-radius: 8px;
 	padding: 10px;
+	max-width: 150px;
+	max-height: 150px;
 }
 
 .mainItem .informations .autresImages div:hover {
@@ -85,7 +87,6 @@
 
 .item > img {
 	height: 100%;
-	width: 100%;
 }
 
 .item .informations .autresImages {
