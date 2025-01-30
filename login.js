@@ -30,6 +30,7 @@ connexion = () => {
 
     if (user && user.mdp === mdp) {
         alert('Connexion réussie');
+        location.href = "index.html";
     } else {
         alert('Email ou mot de passe invalide');
     }
@@ -45,6 +46,7 @@ inscription = () => {
 
         localStorage.setItem(email, JSON.stringify(user));
         alert('Inscription réussie');
+        location.href = "index.html";
     } else {
         alert('Email ou mot de passe invalide');
     }
