@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="fondGradient">
+    <div class="content">
+        <div class="containerLogin">
+            <div id="connexion">
+                <h1 class="titre">Connexion</h1>
+                <form class="champs">
+                    <input required id="emailConnexion" class="champ" type="text" name="login" placeholder="Email">
+                    <input required id="mdpConnexion" class="champ" type="password" name="password" placeholder="Mot de passe">
+                    <button class="button" type="submit">Connexion</button>
+                </form>
+                <p class="autreOption" onclick="afficherInscription()">S'inscrire</p>
+            </div>
+            <div id="inscription">
+                <h1 class="titre">Inscription</h1>
+                <form class="champs">
+                    <input required id="emailInscription" class="champ" type="text" name="login" placeholder="Email">
+                    <input required id="mdpInscription" class="champ" type="password" name="password" placeholder="Mot de passe">
+                    <input required id="confMdpInscription" class="champ" type="password" name="passwordRepeat" placeholder="Confirmation du mot de passe">
+                    <button class="button" type="submit">Incription</button>
+                </form>
+                <p class="autreOption" onclick="afficherConnexion()">Se connecter</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <h1>Aide</h1>
+            <p>contact@headboost.fr</p>
+            <p>Contactez-nous</p>
+            <p>Comment acheter</p>
+        </div>
+        <div>
+            <h1>Recrutement</h1>
+            <p>business@headboost.fr</p>
+            <p>Postuler en ligne</p>
+            <p>Comment faire ?</p>
+        </div>
+        <div>
+            <h1>Réseaux</h1>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+    </div>
+</body>
+</html>
