@@ -1,0 +1,66 @@
+body {
+    display: flex;
+}
+
+.jeux {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-self: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.jeu {
+    width: 25%;
+    max-width: 300px;
+    background: #141725;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.jeu h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.jeu img {
+    width: 100%;
+}
+
+.jeu .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 10px;
+}
+
+.jeu .buttons button {
+	background-color: transparent;
+	color: #444fd6;
+	border : solid 2px #444fd6;
+	border-radius: 5px;
+	padding: 6px 14px;
+	
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	width: 100px;
+	height: fit-content;
+}
+
+
+.jeu .buttons button:hover {
+	color: white;
+	background-color: #444fd6;
+	transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+    .jeu {
+        width: 200px;
+    }
+}
